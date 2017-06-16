@@ -23,7 +23,7 @@
 Name:           %{?sub_prefix}php-%{pecl_name}
 Summary:        Standard PHP module provides tidy library support
 Version:        7.0.10
-Release:        1%{?dist}
+Release:        3%{?dist}
 Source0:        http://www.php.net/distributions/php-%{version}.tar.bz2
 
 License:        PHP
@@ -31,7 +31,7 @@ Group:          Development/Languages
 URL:            http://php.net/%{pecl_name}
 
 BuildRequires:  %{?scl_prefix}php-devel >= 7.0.10
-BuildRequires:  libtidy-devel
+BuildRequires:  libtidy-devel < 1
 
 %if "%{?scl_prefix}" != "%{?sub_prefix}"
 Provides:      %{?scl_prefix}php-%{pecl_name}          = %{version}-%{release}
@@ -107,6 +107,9 @@ make test
 
 
 %changelog
+* Fri Jun 16 2017 Remi Collet <remi@remirepo.net> - 7.0.10-3
+- rebuild with static libtidy on EL-7
+
 * Thu Mar  9 2017 Remi Collet <remi@remirepo.net> - 7.0.10-1
 - initial package
 - version 7.0.10
