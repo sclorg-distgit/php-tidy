@@ -23,7 +23,6 @@ BuildRequires: libtool
 BuildRequires: doxygen
 BuildRequires: libxslt
 
-Requires: %{libname}%{?_isa} = %{version}-%{release}
 
 %description
 When editing HTML it's easy to make mistakes. Wouldn't it be nice if
@@ -41,7 +40,6 @@ Summary: Development files for %{name}
 Group:   Development/Libraries
 Obsoletes: tidy-devel < 0.99.0-10
 Provides:  tidy-devel = %{version}-%{release}
-Requires: %{libname}%{?_isa} = %{version}-%{release}
 %description -n %{libname}-devel
 %{summary}.
 
@@ -57,6 +55,8 @@ sh build/gnuauto/setup.sh
 
 
 %build
+export CFLAGS="$RPM_OPT_FLAGS -fPIC"
+
 %configure \
   --enable-static \
   --disable-shared \
