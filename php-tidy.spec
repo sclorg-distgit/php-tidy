@@ -7,8 +7,8 @@
 # Please, preserve the changelog entries
 #
 %if 0%{?scl:1}
-%if "%{scl}" == "rh-php70"
-%global sub_prefix sclo-php70-
+%if "%{scl}" == "rh-php71"
+%global sub_prefix sclo-php71-
 %else
 %global sub_prefix %{scl_prefix}
 %endif
@@ -22,15 +22,15 @@
 
 Name:           %{?sub_prefix}php-%{pecl_name}
 Summary:        Standard PHP module provides tidy library support
-Version:        7.0.10
-Release:        3%{?dist}
-Source0:        http://www.php.net/distributions/php-%{version}.tar.bz2
+Version:        7.1.8
+Release:        1%{?dist}
+Source0:        http://www.php.net/distributions/php-%{version}.tar.xz
 
 License:        PHP
 Group:          Development/Languages
 URL:            http://php.net/%{pecl_name}
 
-BuildRequires:  %{?scl_prefix}php-devel >= 7.0.10
+BuildRequires:  %{?scl_prefix}php-devel >= 7.1
 BuildRequires:  libtidy-devel < 1
 
 %if "%{?scl_prefix}" != "%{?sub_prefix}"
@@ -107,6 +107,9 @@ make test
 
 
 %changelog
+* Thu Aug 10 2017 Remi Collet <remi@remirepo.net> - 7.1.8-1
+- update to 7.1.8 for sclo-php71
+
 * Fri Jun 16 2017 Remi Collet <remi@remirepo.net> - 7.0.10-3
 - rebuild with static libtidy on EL-7
 
