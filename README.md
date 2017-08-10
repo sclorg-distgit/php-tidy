@@ -7,6 +7,8 @@ This package only build the static library, only for EL-7
     build -bs *spec --define "dist .el7"
     cbs add-pkg    sclo7-sclo-php70-sclo-candidate --owner=sclo  tidy
     cbs add-pkg    sclo7-sclo-php56-sclo-candidate --owner=sclo  tidy
+    cbs add-pkg    sclo7-sclo-php71-sclo-candidate --owner=sclo  tidy
     cbs build      sclo7-sclo-php70-sclo-el7       <above>.src.rpm
     cbs tag-build  sclo7-sclo-php56-sclo-candidate <above build>
+    cbs tag-build  sclo7-sclo-php71-sclo-candidate <above build>
 
