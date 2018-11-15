@@ -1,14 +1,14 @@
 # centos/sclo spec file for php-tidy
 #
-# Copyright (c) 2017 Remi Collet
+# Copyright (c) 2017-2018 Remi Collet
 # License: CC-BY-SA
 # http://creativecommons.org/licenses/by-sa/4.0/
 #
 # Please, preserve the changelog entries
 #
 %if 0%{?scl:1}
-%if "%{scl}" == "rh-php71"
-%global sub_prefix sclo-php71-
+%if "%{scl}" == "rh-php72"
+%global sub_prefix sclo-php72-
 %else
 %global sub_prefix %{scl_prefix}
 %endif
@@ -22,7 +22,7 @@
 
 Name:           %{?sub_prefix}php-%{pecl_name}
 Summary:        Standard PHP module provides tidy library support
-Version:        7.1.8
+Version:        7.2.10
 Release:        1%{?dist}
 Source0:        http://www.php.net/distributions/php-%{version}.tar.xz
 
@@ -107,6 +107,9 @@ make test
 
 
 %changelog
+* Thu Nov 15 2018 Remi Collet <remi@remirepo.net> - 7.2.10-1
+- update to 7.2.10 for sclo-php72
+
 * Thu Aug 10 2017 Remi Collet <remi@remirepo.net> - 7.1.8-1
 - update to 7.1.8 for sclo-php71
 
