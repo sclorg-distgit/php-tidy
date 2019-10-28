@@ -6,7 +6,7 @@
 Name:    tidy
 Summary: Utility to clean up and pretty print HTML/XHTML/XML
 Version: 0.99.0
-Release: 40%{?dist}
+Release: 40%{?dist}.1
 
 Group:   Applications/Text
 License: W3C
@@ -116,6 +116,7 @@ mv testone.sh{~,}
 
 
 %changelog
+* Mon Oct 28 2019 Remi Collet <remi@remirepo.net> - 0.99.0-40.1
 * Thu Mar  9 2017 Remi Collet <remi@remirepo.net> - 0.99.0-40
 - provide only static library
 

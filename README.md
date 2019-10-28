@@ -15,3 +15,6 @@ This package only build the static library, only for EL-7
     cbs tag-build  sclo7-sclo-php71-sclo-candidate <above build>
     cbs tag-build  sclo7-sclo-php72-sclo-candidate <above build>
 
+    cbs add-pkg    sclo7-sclo-php73-sclo-candidate --owner=sclo  tidy
+    cbs build      sclo7-sclo-php73-sclo-el7       <above>.src.rpm
+	=> tidy-0.99.0-40.el7.1
