@@ -7,11 +7,7 @@
 # Please, preserve the changelog entries
 #
 %if 0%{?scl:1}
-%if "%{scl}" == "rh-php72"
 %global sub_prefix sclo-php72-
-%else
-%global sub_prefix %{scl_prefix}
-%endif
 %scl_package        php-tidy
 %else
 %global pkg_name    %{name}
@@ -22,7 +18,7 @@
 
 Name:           %{?sub_prefix}php-%{pecl_name}
 Summary:        Standard PHP module provides tidy library support
-Version:        7.2.10
+Version:        7.2.24
 Release:        1%{?dist}
 Source0:        http://www.php.net/distributions/php-%{version}.tar.xz
 
@@ -107,6 +103,9 @@ make test
 
 
 %changelog
+* Mon Nov  4 2019 Remi Collet <remi@remirepo.net> - 7.2.24-1
+- update to 7.2.24
+
 * Thu Nov 15 2018 Remi Collet <remi@remirepo.net> - 7.2.10-1
 - update to 7.2.10 for sclo-php72
 
