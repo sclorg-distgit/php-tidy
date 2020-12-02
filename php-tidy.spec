@@ -1,6 +1,6 @@
 # centos/sclo spec file for php-tidy
 #
-# Copyright (c) 2017-2019 Remi Collet
+# Copyright (c) 2017-2020 Remi Collet
 # License: CC-BY-SA
 # http://creativecommons.org/licenses/by-sa/4.0/
 #
@@ -18,7 +18,7 @@
 
 Name:           %{?sub_prefix}php-%{pecl_name}
 Summary:        Standard PHP module provides tidy library support
-Version:        7.3.11
+Version:        7.3.20
 Release:        1%{?dist}
 Source0:        http://www.php.net/distributions/php-%{version}.tar.xz
 
@@ -103,6 +103,9 @@ make test
 
 
 %changelog
+* Wed Dec  2 2020 Remi Collet <remi@remirepo.net> - 7.3.20-1
+- update to 7.3.20
+
 * Tue Dec 10 2019 Remi Collet <remi@remirepo.net> - 7.3.11-1
 - update to 7.3.11
 
